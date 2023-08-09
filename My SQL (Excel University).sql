@@ -1,0 +1,11 @@
+create database Exceluniversity;
+use Exceluniversity;
+create table India_std(S_id int , S_name char(30) , Country char(30) , Marks int);
+desc India_std;
+insert into India_std values(1 , "Krishu" , "India" , 25); 
+insert into India_std values(2 , "Khushi" , "India" , 55);
+insert into India_std values(3 , "Neel" , "UK" , 59);
+insert into India_std values(4 , "Dev" , "US" , 30);
+insert into India_std values(5 , "Anish" , "UK" , 60);
+insert into India_std values(6 , "Keyur" , "US" , 90);
+select * from India_std;

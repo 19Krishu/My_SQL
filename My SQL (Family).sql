@@ -1,0 +1,17 @@
+create database Family;
+use Family;
+create table Family (M_name char(30) , Age int , B_year int);
+desc Family;
+insert into Family values ("Krishu" , 18 , 2003);
+select * from Family;
+insert into Family values ("Khushi" , 17 , 2004) , ("Dev" , 17 , 2004) , ("Anish" , 17 , 2004) , ("Neel" , 22 , 1999) , ("Vinas" , 28 , 1994) , ("Nipa" , 26 , 1996) , ("Viraj" , 21 , 2001) , ("Hardik" , 18 , 2003) , ("Krish" , 19 , 2001);
+select M_name from Family;
+select B_Year , M_name from Family;
+select M_name from Family where B_year = 2004;
+select age from Family where B_year = 2003;
+select M_name from Family where age = 17;
+select M_name from Family where age<20;
+select M_name from Family where age>20;
+select M_name from Family where B_year>2000;
+select M_name from Family where B_year<2000;
+select * from Family;

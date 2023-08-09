@@ -1,0 +1,15 @@
+create database student;
+use student;
+create table student(student_id int , student_name char(30) , age int , marks int);
+desc student;
+insert into student values (1 , "Ram" , 20 , 35);
+select * from student;
+insert into student values (2, "John" , 25 , 50) , (3, "Jerry" , 22 , 55) , (4, "Tom" , 83 , 51) , (5, "Shelly" , 21 , 41);
+select student_name from student;
+select marks , student_name from student;
+select student_name from student where student_id = 4;
+select marks from student where student_id = 4;
+select age from student where student_id = 1;
+select student_name from student where marks>50;
+select age from student where age>23;
+select * from student;

@@ -1,0 +1,14 @@
+create database HarviUniversity;
+use HarviUniversity;
+create table student(stud_id int , Stud_name char(30) , Course char(30));
+create table department(Dept_name char(30) , Stud_id int);
+desc student;
+desc department;
+insert into student values(101 , 'John' , 'Computer');
+insert into student values(105 , 'Merry' , 'AI'),(107 , 'Sheero' , 'Biology'),(108 , 'Bisle' , 'Maths');
+select * from student;
+insert into department values('CS_department' , 105);
+insert into department values('CS_department' , 101),('Sci-department' , 101),('Maths_department' , 108);
+select * from department;
+select Stud_name from student where Stud_id=107;
+select student.Stud_name from student join department on student.stud_id=department.Stud_id where Dept_name='CS_department';

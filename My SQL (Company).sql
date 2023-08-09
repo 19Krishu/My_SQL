@@ -1,0 +1,13 @@
+create database company;
+use company;
+create table employee(E_id int , E_name varchar(50),Salary int);
+desc employee;
+insert into employee values(1, 'Krishu',50000);
+select * from employee;
+insert into employee values(2, 'Saimah',40000),(3, 'Ruchika',30000),(4, 'Krish',10000),(5, 'Nilam',20000),(6, 'Tushar',10000),(7, 'Palak',20000),(8,'Foram',20000),(9,'Niyati',10000),(10,'Mansi',30000);
+select E_name,Salary from employee limit 5;
+select 0.15*salary as bonus from employee limit 5;
+select sum(Salary)from employee;
+select min(Salary) from employee;
+select max(Salary) from employee;
+select avg(salary) from employee;

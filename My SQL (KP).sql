@@ -1,0 +1,24 @@
+create database university;
+drop database univerity;
+use university;
+create table student(s_id integer, s_name char(30));
+desc student;
+create database ds;
+drop database ds;
+drop table university;
+alter table student add column marks int;
+desc student;
+alter table student drop column age;
+alter table student change column s_name name char;
+alter table student modify column name varchar(30); 
+alter table student rename to myclass;
+insert into myclass values(1, 'merry',56);
+select * from myclass;
+insert into myclass values(2, 'krisha',76);
+select * from myclass;
+insert into myclass (name) values('saimah');
+insert into myclass values (4, 'ruchika',70) , (5, 'krish',87) , (6, 'tushar',67);
+ select * from myclass;
+ create table student (id int);
+ truncate student;
+ 

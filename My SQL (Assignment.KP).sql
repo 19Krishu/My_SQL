@@ -1,0 +1,17 @@
+drop database university;
+create database university;
+use university;
+create table department(D_id integer , D_name varchar(50));
+create table employees(E_id integer , E_name varchar(50) , E_dept integer , E_salary decimal (10,2));
+desc department;
+desc employees;
+insert into department values (1, 'Admin');
+select * from department;
+insert into department values (2, 'Sales'),(3, 'Marketing'),(4, 'Purchasing'),(5, 'Human Resources'),(6, 'Shipping'),(7, 'Finance'),(8, 'Accounting'),(9, 'Treasury'),(10, 'Corporate Tax');
+insert into employees values (1, 'Krishu' , 10 , 1500);
+select * from employees;
+insert into employees values (2, 'Neela', 20 , 500),(3, 'Paritosh', 30 , 1000),(4, 'Vinas' , 40 , 1500),(5, 'Nipa' , 50 , 900),(6, 'Viraj' , 10 , 1500),(7, 'Ravi' , 20 , 800),(8, 'Kavita' , 30 , 1000),(9, 'Bhomesh' , 40 , 1500),(10, 'Roshni' , 50 , 1000);
+select * from employees;
+set sql_safe_updates=0;
+update department set D_name='Administration' where D_id=1;
+select * from department;

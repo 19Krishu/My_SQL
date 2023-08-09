@@ -1,0 +1,17 @@
+create database GLS;
+use GLS;
+create table Student(S_id int , S_name char(30) , Address char(30));
+create table Course(C_id varchar(30) , C_name char(30) , Location char(30));
+desc Student;
+desc Course;
+insert into Student values(1, 'Khushi' , 'K.K.Nagar');
+insert into Student values(2, 'Neel' , 'Gota');
+insert into Student values(3, 'Dev' , 'Gota');
+select * from Student;
+insert into Course values('C_1' , 'SQL' , 'Ahmedabad');
+insert into Course values('C_2' , 'Data Sci' , 'Gota');
+insert into Course values('C_3' , 'Big Data' , 'Gujarat');
+select * from Course;
+select Address from Student;
+select C_name from Course;
+select Address from Student union select C_name from Course;

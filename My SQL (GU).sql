@@ -1,0 +1,14 @@
+create database GU;
+use GU;
+create table Student(S_id int , S_name char(30) , Course char(30) , Fees int);
+desc Student;
+insert into Student values(1 , 'Khushi' , 'My SQL' , '20000');
+insert into Student values(2, 'Krishu' , 'Big Data' , '50000');
+insert into Student values(3, 'Dev' , 'My SQL' , 15000);
+insert into Student values(4, 'Anish' , 'Big Data' , 40000);
+insert into Student values(5, 'Neel' , 'Data Science' , 60000);
+select * from Student;
+select Course,count(Course) from Student group by Course;
+select S_name from Student where Fees in (select max(Fees) from Student group by Course);
+select Course,count(Course) from Student group by Course having count(Course)<2;
+select Course,count(Course) from Student group by Course having count(Course)=2;

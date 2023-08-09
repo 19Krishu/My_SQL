@@ -1,0 +1,16 @@
+create database company;
+use company;
+create table emp(emp_id int , name char(30));
+drop database university;
+insert into emp (name) values ("Krishu");
+insert into emp values (1 , "Neel");
+select * from emp;
+show databases;
+show tables;
+alter table emp add column age int;
+alter table emp drop column name;
+alter table emp modify column age int;
+alter table emp rename to myclass;
+truncate myclass;
+drop table myclass;
+select * from myclass;

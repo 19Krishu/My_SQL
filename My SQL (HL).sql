@@ -1,0 +1,14 @@
+create database HL;
+use HL;
+create table Emp(E_id int , E_name char(30) , Dept char(30) , Salary int);
+desc Emp;
+insert into Emp values(1 , 'Khushi' , 'HR' , '10000');
+insert into Emp values(2, 'Krishu' , 'MRKT' , '20000');
+insert into Emp values(3, 'Dev' , 'HR' , 30000);
+insert into Emp values(4, 'Anish' , 'MRKT' , 40000);
+insert into Emp values(5, 'Neel' , 'IT' , 50000);
+select * from Emp;
+select Dept,count(Dept) from Emp group by Dept;
+select E_name from Emp where Salary in (select max(Salary) from Emp group by Dept);
+select Dept,count(Dept) from Emp group by Dept having count(Dept)<2;
+select Dept,count(Dept) from Emp group by Dept having count(Dept)=2;
